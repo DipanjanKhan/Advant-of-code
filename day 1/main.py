@@ -1,4 +1,4 @@
-with open("D:\Dipu\Practice\Python\Advant of code\day 1\input.txt", "r") as f:
+with open("input.txt", "r") as f:
     str = list(f.readlines())
 
 num = []
