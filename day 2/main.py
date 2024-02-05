@@ -22,5 +22,6 @@ for i in str:
             green = int(re.findall(r"\d",st)[0]) + green
     if red <= 12 and green <= 13 and blue <= 14:
         count += no
-    print(count)
+        print(no)
+    
 print(count)
