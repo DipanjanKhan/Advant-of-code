@@ -1,6 +1,6 @@
 import re
 
-with open("sample.txt", "r") as f:
+with open("input.txt", "r") as f:
     str = f.readlines()
 list1 = []
 list2 = []
@@ -15,14 +15,16 @@ for i in str:
         if l in list2:
             count +=1
     countl.append(count)
+print(countl)
 total = 0
+time = 0
 for i in range(0, len(countl)):
-    if countl[0] == countl[i]:
+    if countl[i] == countl[0] and time<=4:
         total = total + (countl[0]*2)
+        time += 1
     else:
         total = total + countl[i]
 print (total)
-
     
 
 
