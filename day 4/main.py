@@ -15,17 +15,12 @@ for i in str:
         if l in list2:
             count +=1
     countl.append(count)
-print(countl)
 total = 0
 time = 0
 for i in range(0, len(countl)):
-    if countl[i] == countl[0] and time<=4:
-        total = total + (countl[0]*2)
+    if countl[i] == countl[0] and i != 0 and time<=3:
+        total = total + (countl[0] * 2)
         time += 1
     else:
         total = total + countl[i]
 print (total)
-    
-
-
-        
