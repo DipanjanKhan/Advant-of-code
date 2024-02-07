@@ -1,4 +1,4 @@
-with open("input.txt", "r") as f:
+with open("D:\Dipu\Practice\Python\Advant of code\day 1\sample.txt", "r") as f:
     str = list(f.readlines())
 
 num = []
@@ -13,6 +13,3 @@ for i in num2:
     value = int(i[0]+i[-1])
     sum = sum + value
 print(sum)
-
-
-
