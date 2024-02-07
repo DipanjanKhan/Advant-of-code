@@ -1,10 +1,9 @@
 import re
 
-with open("input.txt",'r') as f:
+with open("D:\Dipu\Practice\Python\Advant of code\day 2\input.txt",'r') as f:
     str = f.readlines()
 
 no = 0
-lists = []
 count = 0
 for i in str:
     no += 1
