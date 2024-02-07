@@ -3,7 +3,7 @@ import re
 symbol = re.compile(r"[!@#$%^&*-+/?]")
 lists = []
 
-with open("D:\Dipu\Practice\Python\Advant of code\day 3\input1.txt", "r") as f:
+with open("D:\Dipu\Practice\Python\Advant of code\day 3\input2.txt", "r") as f:
     for i in f.readlines():
         lists.append(i)
 
@@ -64,19 +64,20 @@ for i in lists:
                         digit = ""
 
             # Bottom right corner
-            elif i == len(lists)-1 and l_index == len(i)-1:
+            elif index == len(lists)-1 and l_index == len(i)-1:
+               
                 if symbol.search(i[f_index-1]):
                     sum += num
                     digit = ""
                     
                 else:
-                    substing1 = lists[index+1][f_index:]
+                    substing1 = lists[index-1][f_index:]
                     if symbol.search(substing1):
                         sum += num 
                         digit = ""
             
             # Top middle
-            elif index == 0:
+            elif index == 0 and f_index != 0 and l_index != len(i)-1:
                 if symbol.search(i[f_index-1]) or symbol.search(i[l_index+1]):
                     sum += num
                     digit = ""
@@ -101,7 +102,7 @@ for i in lists:
                         digit = ""
 
             # right middle
-            elif l_index == len(i)-1 and index != 0 and index != len(lists):
+            elif l_index == len(i)-1 and index != 0 and index != len(lists)-1:
                 if symbol.search(i[f_index-1]):
                     sum += num
                     digit = ""
