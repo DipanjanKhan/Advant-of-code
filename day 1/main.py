@@ -1,10 +1,11 @@
-with open("D:\Dipu\Practice\Python\Advant of code\day 1\sample.txt", "r") as f:
+with open("D:\Dipu\Practice\Python\Advant of code\day 1\input.txt", "r") as f:
     str = list(f.readlines())
 
 num = []
 num2 = []
 sum = 0
 value = 0
+
 for i in str:
     num = [char for char in i if char.isdigit()]
     num2.append(num)
