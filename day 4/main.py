@@ -1,7 +1,8 @@
 import re
 
-with open("input.txt", "r") as f:
+with open("D:\Dipu\Practice\Python\Advant of code\day 4\input.txt", "r") as f:
     str = f.readlines()
+
 list1 = []
 list2 = []
 count = 0
@@ -15,17 +16,15 @@ for i in str:
         if l in list2:
             count +=1
     countl.append(count)
+
 total = 0
 time = 0
-for i in range(0, len(countl)):
-    if countl[i] == countl[0] and i != 0 and time<=3:
-        total = total + (countl[0] * 2)
-        time += 1
-    else:
-        total = total + countl[i]
+
+for i in countl:
+    if i !=0:
+        n = 1
+        for j in range(1, i):
+            n = n * 2
+        total += n
+
 print (total)
-
-    
-
-
-        
